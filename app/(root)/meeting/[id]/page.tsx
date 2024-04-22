@@ -20,7 +20,7 @@ function Meeting({ params: { id } }: { params: { id: string }}) {
       <StreamCall call={call}>
         <StreamTheme>
           {!isSetupComplete ? (
-            <MeetingSetup />
+            <MeetingSetup setIsSetupComplete={setIsSetupComplete} />
           ): (
             <MeetingRoom />
           )}
